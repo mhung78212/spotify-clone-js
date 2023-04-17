@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 :root {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: white;
+    background-color: white;
 }
 @layer utilities {
-  .scrollbar-hidden {
-      -ms-overflow-style: none; /* Internet Explorer 10+ */
-      scrollbar-width: none; /* Firefox */
-  }
-  .scrollbar-hidden::-webkit-scrollbar {
-      display: none; /* Safari and Chrome */
-  }
+    .scrollbar-hidden {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+    .after-span span::after {
+        content: ", ";
+    }
+    .after-span span:last-child::after {
+        content: "";
+    }
 }

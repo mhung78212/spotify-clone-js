@@ -1,11 +1,11 @@
-import Dashboard from '@/components/Dashboard'
-import Sidebar from '@/components/Sidebar'
-import Head from 'next/head'
-
+import Dashboard from "@/components/Dashboard";
+import Sidebar from "@/components/Sidebar";
+import {  getSession } from "next-auth/react";
+import Head from "next/head";
 
 export default function Home() {
-  return (
-<div className=" h-screen overflow-hidden">
+    return (
+        <div className=" h-screen overflow-hidden">
             <Head>
                 <title>Spotify 2.0</title>
                 <meta name="description" content="Spotify" />
@@ -15,7 +15,14 @@ export default function Home() {
                 <Sidebar />
                 <Dashboard />
             </main>
-            {/* <div></div> */}
         </div>
-  )
+    );
 }
+// export const getServerSideProps = async () => {
+//   const session = await getSession();
+//   return {
+//       props: {
+//         session,
+//       },
+//   };
+// };

@@ -40,7 +40,7 @@ const jwtCallback = ({ token, user, account }) => {
 
     // Return previous token if the access token has not expired yet
     if (Date.now() < token.accessTokenExpires) {
-        console.log("Expired access token");
+        console.log("ExpiredAccessToken");
         return token;
     }
     // Access token has expired, try to update it
