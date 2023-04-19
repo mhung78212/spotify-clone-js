@@ -4,7 +4,6 @@ import useSpotify from "@/hooks/useSpotify";
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/solid";
 import { shuffle } from "lodash";
 import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import Songs from "./Songs";
@@ -70,14 +69,14 @@ const Dashboard = () => {
                 {selectedPlaylist && (
                     <>
                         <img
-                            src={selectedPlaylist.images[0].url}
+                            src={selectedPlaylist.images[0]?.url || ''}
                             alt="Playlist Image"
                             className="shadow-2xl h-40 w-40 border"
                         />
                         <div>
                             <p>PLAYLIST</p>
                             <h1 className="text-2xl font-bold md:text-3xl xl:text-4xl">
-                                {selectedPlaylist.name}
+                                {selectedPlaylist?.name}
                             </h1>
                         </div>
                     </>

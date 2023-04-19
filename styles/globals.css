@@ -11,6 +11,19 @@
 body {
     background-color: white;
 }
+@layer components {
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        input[type="range"]::-webkit-slider-thumb {
+            width: 15px;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 15px;
+            box-shadow: -155px 0 0 150px #1ed760;
+            background: #fff;
+            border-radius: 50%;
+        }
+    }
+}
 @layer utilities {
     .scrollbar-hidden {
         -ms-overflow-style: none; /* Internet Explorer 10+ */

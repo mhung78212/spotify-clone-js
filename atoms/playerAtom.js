@@ -7,4 +7,12 @@ export const playlistIdState = atom({
 export const selectedPlaylistState = atom({
     key: "selectedPlaylistState",
     default: "",
-  });
+});
+export const currentTrackState = atom({
+    key: "currentTrackState",
+    default: null,
+});
+export const isPlayingState = atom({
+    key: "isPlayingState",
+    default: false,
+});

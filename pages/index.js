@@ -1,6 +1,7 @@
 import Dashboard from "@/components/Dashboard";
+import Player from "@/components/Player";
 import Sidebar from "@/components/Sidebar";
-import {  getSession } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,14 +16,17 @@ export default function Home() {
                 <Sidebar />
                 <Dashboard />
             </main>
+            <div className="sticky bottom-0 text-white">
+                <Player />
+            </div>
         </div>
     );
 }
-// export const getServerSideProps = async () => {
-//   const session = await getSession();
-//   return {
-//       props: {
-//         session,
-//       },
-//   };
-// };
+export const getServerSideProps = async () => {
+    const session = await getSession();
+    return {
+        props: {
+            session,
+        },
+    };
+};
