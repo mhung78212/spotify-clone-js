@@ -18,6 +18,7 @@ const Song = ({ track, order }) => {
             uris: [track.track.uri],
         });
     };
+
     return (
         <>
             <tr

@@ -82,7 +82,7 @@ const Dashboard = () => {
                     </>
                 )}
             </section>
-            <div className="">
+            <div className="mb-[5.6rem]">
                 <Songs />
             </div>
         </div>

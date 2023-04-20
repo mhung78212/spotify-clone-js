@@ -27,7 +27,7 @@ const Sidebar = () => {
     }, [session, spotifyApi]);
     // console.log(playListId);
     return (
-        <div className="h-screen overflow-y-scroll scrollbar-hidden text-gray-500 bg-black max-w-[18rem] p-5 text-xs lg:text-sm border-r border-gray-900">
+        <div className="h-screen overflow-y-scroll scrollbar-hidden text-gray-500 bg-black max-w-[18rem] p-5 text-xs lg:text-sm border-r border-gray-900 mb-[5.6rem]">
             <div className="space-y-4">
                 <MenuButton icon={HomeIcon} label="Home" />
                 <MenuButton icon={SearchIcon} label="Search" />
